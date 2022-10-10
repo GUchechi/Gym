@@ -83,3 +83,11 @@
     height: 2rem;
 }
 
+.partners {
+    gap: 1rem;
+    display: flex;
+}
+
+.partners>img{
+    width: 2.5rem;
+}
