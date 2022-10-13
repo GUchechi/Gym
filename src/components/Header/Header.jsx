@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import './Header.css'
 import Bars from '../../assets/bars.png'
 import Logo  from '../../assets/logo.png'
+import { Link } from 'react-scroll'
 
 const Header = () => {
   const mobile = window.innerWidth <=768? true: false;
   const [menuOpened, setMenuOpened] = useState(false)
 
   return (
-    <div className="header">
+    <div className="header" id='header'>
       <img src={Logo} alt="Logo" className='logo'/>
       {menuOpened === false && mobile === true ? (
         <div style={{backgroundColor: 'var(--appColor)',
@@ -21,11 +22,55 @@ const Header = () => {
       ) : (
 
       <ul className='header-menu'>
-        <li onClick={() => setMenuOpened(false)}>Home</li>
-        <li onClick={() => setMenuOpened(false)}>Programs</li>
-        <li onClick={() => setMenuOpened(false)}>Why us</li>
-        <li onClick={() => setMenuOpened(false)}>Plans</li>
-        <li onClick={() => setMenuOpened(false)}>Testimonials</li>
+        <li>
+
+          <Link
+             onClick={() => setMenuOpened(false)}
+             activeClass='active'
+             to='home'
+             span={true}
+             smooth={true}
+          >Home</Link> 
+        </li>
+
+        <li>
+
+          <Link
+             onClick={() => setMenuOpened(false)}
+             to='programs'
+             span={true}
+             smooth={true}
+          >Programs</Link> 
+        </li>
+
+        <li>
+
+          <Link
+             onClick={() => setMenuOpened(false)}
+             to='reasons'
+             span={true}
+             smooth={true}
+          >Why us</Link> 
+        </li>
+        <li>
+
+          <Link
+             onClick={() => setMenuOpened(false)}
+             to='plans'
+             span={true}
+             smooth={true}
+          >Plans</Link> 
+        </li>
+
+        <li>
+
+          <Link
+             onClick={() => setMenuOpened(false)}
+             to='testimonials'
+             span={true}
+             smooth={true}
+          >  Testimonials</Link> 
+        </li>
       </ul>
       )}
 
