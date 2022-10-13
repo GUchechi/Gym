@@ -203,6 +203,7 @@
         font-size: small;
         align-self: center;
         transform: scale(0.8);
+        /* width: 17rem; */
     }
 
     .hero-text {
@@ -228,7 +229,42 @@
 
 
     .figures > div > span:nth-of-type(2){
-        font-size: large;
+        font-size: small;
+    }
+
+    .right-h{
+        position: relative;
+        background: none;
+    }
+
+    .heart-rate {
+        left: 1rem;
+        top: 2rem;
+    }
+
+    .calories {
+        position: relative;
+        top: 5rem;
+        left: 2rem;
+    }
+
+    .calories>img{
+        width: 2rem;
+    }
+
+    .hero-image {
+        position: relative;
+        width: 15rem;
+        left: 7rem;
+        top: 4rem;
+        align-self: center;
+    }
+
+    .hero-image-back {
+        width: 15rem;
+        left: 2rem;
+        top: 0;
     }
 }
+
 
